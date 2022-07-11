@@ -12,4 +12,9 @@ public class ParkingSpotService {
     public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
         this.parkingSpotRepository = parkingSpotRepository;
     }
+
+    @Transactional
+    public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {
+        return parkingSpotRepository.save(parkingSpotModel);
+    }
 }
